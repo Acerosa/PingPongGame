@@ -53,7 +53,9 @@ public class GamePanel  extends JPanel implements Runnable {
             paddle2.draw(graphicsL);
     }
     public void move(){}
-    public void checkCollision(){}
+    public void checkCollision(){
+        //this method stops the paddles from passing the edges of the frame
+    }
     public void run(){
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
@@ -76,8 +78,15 @@ public class GamePanel  extends JPanel implements Runnable {
     }
 
     public class ActionListener extends KeyAdapter {
-        public void keyPressend(KeyEvent pressedKey){}
 
-        public void keyReleased(KeyEvent releasedKey){}
+        public void keyPressed(KeyEvent pressedKey){
+            paddle1.keyPressed(pressedKey);
+            paddle2.keyPressed(pressedKey);
+        }
+
+        public void keyReleased(KeyEvent releasedKey){
+            paddle1.keyReleased(releasedKey);
+            paddle2.keyReleased(releasedKey);
+        }
     }
 }
