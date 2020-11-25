@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+
 
 public class GameFrame extends JFrame {
 
     GamePanel panel;
+
     public GameFrame() {
         panel = new GamePanel();
         this.add(panel);
