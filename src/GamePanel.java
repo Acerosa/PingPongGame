@@ -55,6 +55,7 @@ public class GamePanel  extends JPanel implements Runnable {
             paddle1.draw(graphicsL);
             paddle2.draw(graphicsL);
             ball.draw(graphicsL);
+            score.draw(graphicsL);
     }
 
     public void move(){
@@ -119,13 +120,13 @@ public class GamePanel  extends JPanel implements Runnable {
             score.player2++;
             newPaddles();
             newBall();
-            System.out.println("Player 2: "+ score.player2);
+           // System.out.println("Player 2: "+ score.player2);
         }
         if (ball.x >= GAME_WIDTH-BALL_DIAMETER){
             score.player1++;
             newPaddles();
             newBall();
-            System.out.println("Player 1: "+score.player1);
+            //System.out.println("Player 1: "+score.player1);
         }
 
     }
